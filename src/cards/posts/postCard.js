@@ -20,7 +20,6 @@ const postCard = async (req, res) => {
     }
     validateField('título', title);
     validateField('descripción', description);
-    validateField('imagen', image);
 
     if (title !== '' && description !== '' && image !== '') {
       const insertUser = await collection.insertOne(req.body);
